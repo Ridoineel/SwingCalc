@@ -1,0 +1,30 @@
+
+.btn-border-blue {
+    -fx-border-color: #0088ff;
+}
+
+.btn-primary {
+    -fx-text-fill: white;
+    -fx-background-color: #0088ff;
+}
+
+.btn-danger {
+    -fx-text-fill: white;
+    -fx-background-color: #ff6666;
+}
+
+.text-muted {
+    -fx-text-fill: #666;
+}
+
+.text-muted-1 {
+    -fx-text-fill: #666;
+}
+
+.text-muted-2 {
+    -fx-text-fill: #999;
+}
+
+.text-center {
+    -fx-alignment: center;
+}

@@ -1,6 +1,5 @@
 package com.calculator.calculator_v1;
 
-import javafx.animation.Animation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -50,11 +49,9 @@ public class HelloController implements Initializable {
             }
         });
 
-
         // cursor hand on clear button and equal button
         clearButton.setCursor(Cursor.HAND);
         equalButton.setCursor(Cursor.HAND);
-
     }
 
     public void addToExpression(Button target) {
@@ -101,19 +98,12 @@ public class HelloController implements Initializable {
 
     public void printResult() throws IOException {
         String expression = parseExpression(textField.getText());
+        String python_calc_file = getClass().getResource("api/calc.py").getFile();
 
-//        expression.repla
-//        System.out.println(expression       .replaceAll("√([0-9])+", "((\1)**0.5"));
-
-        String python_eval_code = String.format("import re; print(eval(re.sub(r'√([0-9]+)', r'(\\1)**0.5',  '%s')))", expression);
-        String[] command = {"python3", "-c", python_eval_code};
+        String[] command = {"python3", python_calc_file, "-e", expression};
         Boolean success = false;
 
         String result_string = systemCommand(command);
-
-
-
-
 
         try {
             result = Double.parseDouble(result_string);

@@ -22,7 +22,7 @@ public class HelloController implements Initializable {
     private Text alertText;
     private String text_item;
     private double result;
-    private Map<String, Double> history = new HashMap<>();
+    private List<String[]> history = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -82,8 +82,8 @@ public class HelloController implements Initializable {
     public void printResult() throws IOException {
         String expression = parseExpression(textField.getText());
 
-        String python_eval = String.format("print(eval('%s'))", expression);
-        String[] command = {"python3", "-c", python_eval};
+        String python_eval_code = String.format("print(%s)", expression);
+        String[] command = {"python3", "-c", python_eval_code};
         Boolean success = false;
 
         String result_string = systemCommand(command);
@@ -98,7 +98,7 @@ public class HelloController implements Initializable {
 
         if (success) {
             // add to history
-            history.put(textField.getText(), result);
+            history.add(new String[]{textField.getText(), result_string});
             // print result
             textField.setText(result_string);
         }

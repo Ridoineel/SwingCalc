@@ -19,14 +19,18 @@ if not arg_datas.expression:
 expression = arg_datas.expression
 
 # expression is clean
-# juste manage √ square symbol
+# juste manage √ and ( square symbol
 # before evaluate
+
+# n(k) -> n*(k)
+expression = sub(r"([0-9]\)*)\((\(*[0-9])", r"\1*(\2", expression)
+
+# n√k -> n*√k
+expression = sub(r"([0-9]\)*)√(\(*[0-9])", r"\1*√\2", expression)
 
 # replace '√' groups by ()**0.5
 expression = sub(r"√([0-9]+)", r"(\1)**0.5", expression)
 expression = sub(r"√\((.+)\)", r"(\1)**0.5", expression)
-
-# space beetween groups of digits 4+5√5 -> 4 + 5 + 
 
 # finaly print result
 

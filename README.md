@@ -1,13 +1,14 @@
-# Note app with Java
+# SwingCalc: Simple calculator with Java
 > Library: `JavaFX`
 
 > #### After open project, maven install dependencies automatically.
-> #### Lookup environment variable `production` in Env.java .
-![fff](src/main/resources/com/note_app/assets/noteapp-cap.png)
-**<center>Note App UI</center>**
+![swingcalc UI](src/main/resources/com/calculator/calculator_v1/assets/swingcalc-cap.png)
+**<center>SwingCalc UI</center>**
 
-# Download Note App
-got to release section and download **note-app-`version`.deb**,
+> ###Lookup environment variable `production` in Env.java .
+
+# Download SwingCalc
+got to release section and download **swingcalc-`version`.deb**,
 
 ### requirement: java 
 
@@ -21,15 +22,13 @@ sudo apt install open-jdk-17
 > Note: if java command exist, and you don't know java path,
 > use <br /> ``` which java```
 
-
-
 # Install
-here, current directory is location of note-app-1.2.deb file
+here, current directory is location of swingcalc-1.2.1.deb file
 
 ```bash
-sudo dpkg -i ./note-app-1.2.deb
+sudo dpkg -i ./swingcalc-1.2.1.deb
 ```
 
 Finally,  check this in **applications launcher** or use command 
-`note-app`
+`swingcalc`
 

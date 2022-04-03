@@ -7,7 +7,7 @@ public class Env {
 
 
     static {
-        production = true;
+        production = false;
         build_linux = false;
 
         if (production) {

@@ -178,6 +178,17 @@ public class HelloController implements Initializable {
         }
     }
 
+    public void cancel(ActionEvent event) {
+        /* delete last character of text field
+        *
+        * */
+
+        int nb_chars = textField.getLength();
+
+        if (nb_chars != 0)
+            textField.setText(textField.getText().substring(0, nb_chars - 1));
+    }
+
     public void updateHistoryLabels() {
         int lastIndex = history.size() - 1;
 

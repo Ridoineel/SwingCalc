@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=SwingCalc
+GenericName=Calculator
+Version=1.0
+Encoding=UTF-8
+Exec=swingcalc
+Icon=/usr/share/icons/swingcalc.png
+Type=Application
+Actions=new-window;
+Keywords=calculator;swing;calc;tools
+Terminal=false
+
+[Desktop Action new-window]
+Name=New Window
+Exec=swingcalc
+Icon=/usr/share/icons/swingcalc.png

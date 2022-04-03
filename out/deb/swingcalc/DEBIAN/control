@@ -1,0 +1,8 @@
+PACKAGE: swingcalc
+Version: 1.2.1
+Architecture: all
+Essential: no
+Priority: optional
+Depends:
+Maintainer: RidoineEl
+Description: Simple calculator

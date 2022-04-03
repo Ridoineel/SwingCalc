@@ -1,1 +1,5 @@
-out
+out/artifacts
+out/deb/swingcalc.deb
+out/deb/swingcalc/opt/swingcalc/*
+out/swingcalc/swingcalc.jar
+out/swingcalc/lib/*

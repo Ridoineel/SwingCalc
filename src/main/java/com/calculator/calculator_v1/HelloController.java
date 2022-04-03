@@ -98,11 +98,8 @@ public class HelloController implements Initializable {
 
     public void printResult() throws IOException {
         String expression = parseExpression(textField.getText());
-        String python_calc_file = getClass().getResource("api/calc.py").getFile();
+        String python_calc_file = Env.calcApiPath;
         python_calc_file = python_calc_file.replace("file:", "");
-
-        // production
-        // python_calc_file = "api/calc.py";
 
         String[] command = {"python3", python_calc_file, "-e", expression};
         Boolean success = false;
